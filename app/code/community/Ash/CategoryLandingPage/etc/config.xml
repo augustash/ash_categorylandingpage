@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Simple module for extending the Mage_Catalog display of
+ * category landing pages to offer displaying subcategories
+ * in a thumbnail grid instead of a sidebar.
+ *
+ * @category    Ash
+ * @package     Ash_CategoryLandingPage
+ * @copyright   Copyright (c) 2015 August Ash, Inc. (http://www.augustash.com)
+ * @author      Josh Johnson (August Ash)
+ */
+-->
+<config>
+    <modules>
+        <Ash_CategoryLandingPage>
+             <version>1.0.0</version>
+        </Ash_CategoryLandingPage>
+    </modules>
+
+    <global>
+        <models>
+            <ash_categorylandingpage>
+                <class>Ash_CategoryLandingPage_Model</class>
+            </ash_categorylandingpage>
+
+            <catalog>
+                <rewrite>
+                    <category_attribute_source_mode>Ash_CategoryLandingPage_Model_Category_Attribute_Source_Mode</category_attribute_source_mode>
+                </rewrite>
+            </catalog>
+        </models>
+
+        <resources>
+            <ash_categorylandingpage_setup>
+                <setup>
+                    <module>Ash_CategoryLandingPage</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </ash_categorylandingpage_setup>
+        </resources>
+
+        <helpers>
+            <ash_categorylandingpage>
+                <class>Ash_CategoryLandingPage_Helper</class>
+            </ash_categorylandingpage>
+        </helpers>
+        <blocks>
+            <ash_categorylandingpage>
+                <class>Ash_CategoryLandingPage_Block</class>
+            </ash_categorylandingpage>
+            <catalog>
+                <rewrite>
+                    <navigation>Ash_CategoryLandingPage_Block_Catalog_Navigation</navigation>
+                </rewrite>
+                <rewrite>
+                    <category_view>Ash_CategoryLandingPage_Block_Catalog_Category_View</category_view>
+                </rewrite>
+            </catalog>
+
+            <!-- compatibility with Mirasvit Advanced SEO Suite (Mirasvit_SeoFilter) -->
+            <seofilter>
+                <rewrite>
+                    <category_view>Ash_CategoryLandingPage_Block_Catalog_Category_View</category_view>
+                </rewrite>
+            </seofilter>
+        </blocks>
+    </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <ash_categorylandingpage>
+                    <file>ash_categorylandingpage.xml</file>
+                </ash_categorylandingpage>
+            </updates>
+        </layout>
+    </frontend>
+</config>

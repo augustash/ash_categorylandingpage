@@ -1,0 +1,17 @@
+{
+    "name": "augustash/ash_categorylandingpage",
+    "description": "Extend the Mage_Catalog display of category landing pages to offer displaying subcategories in a thumbnail grid instead of a sidebar",
+    "homepage": "https://github.com/augustash/ash_categorylandingpage.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Josh Johnson",
+            "email": "jjohnson@augustash.com"
+        }
+    ],
+    "type": "magento-module",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*",
+        "augustash/ash_core": "*",
+    }
+}

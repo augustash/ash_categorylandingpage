@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Simple module for extending the Mage_Catalog display of
+ * category landing pages to offer displaying subcategories
+ * in a thumbnail grid instead of a sidebar.
+ *
+ * @category    Ash
+ * @package     Ash_CategoryLandingPage
+ * @copyright   Copyright (c) 2015 August Ash, Inc. (http://www.augustash.com)
+ * @author      Josh Johnson (August Ash)
+ */
+-->
+<config>
+    <modules>
+        <Ash_CategoryLandingPage>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Ash_Core/>
+                <Mage_Catalog/>
+                <!-- compatibility with Mirasvit Advanced SEO Suite (Mirasvit_SeoFilter specifically) -->
+                <!-- <Mirasvit_SeoFilter/> -->
+            </depends>
+        </Ash_CategoryLandingPage>
+    </modules>
+</config>
