@@ -16,7 +16,7 @@ class Ash_CategoryLandingPage_Model_Category_Attribute_Source_Mode extends Mage_
         $options = parent::getAllOptions();
 
         $options[] = array(
-            'value' => Ash_CategoryLandingPage_Block_Catalog_Category_View::DM_SUBCATEGORIES,
+            'value' => Ash_CategoryLandingPage_Helper_Data::DM_SUBCATEGORIES,
             'label' => Mage::helper('catalog')->__('Subcategories only'),
         );
 
