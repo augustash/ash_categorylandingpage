@@ -12,16 +12,13 @@
 
 class Ash_CategoryLandingPage_Block_Catalog_Category_View extends Ash_CategoryLandingPage_Block_Catalog_Category_Adapter
 {
-    const DM_SUBCATEGORIES          = 'SUBCATEGORIES';
-    const DM_SUBCATEGORIES_MIXED    = 'SUBCATEGORIES_AND_CMS';
-
     /**
      * Check if category display mode is "Subcategories Only"
      * @return bool
      */
     public function isSubcategoriesMode()
     {
-        return $this->getCurrentCategory()->getDisplayMode() == self::DM_SUBCATEGORIES;
+        return Mage::helper('ash_categorylandingpage')->isSubcategoriesMode();
     }
 
     /**
@@ -30,7 +27,7 @@ class Ash_CategoryLandingPage_Block_Catalog_Category_View extends Ash_CategoryLa
      */
     public function isMixedSubcategoriesMode()
     {
-        return $this->getCurrentCategory()->getDisplayMode() == self::DM_SUBCATEGORIES_MIXED;
+        return Mage::helper('ash_categorylandingpage')->isMixedSubcategoriesMode();
     }
 
     /**

@@ -12,9 +12,17 @@
  */
 -->
 <layout>
+
 <!--
 Catalog.xml
 -->
+    <catalog_category_custom_subcategories_only>
+        <reference name="left">
+            <remove name="catalog.leftnav" />
+         </reference>
+        <update handle="page_one_column"/>
+    </catalog_category_custom_subcategories_only>
+
     <catalog_category_default>
         <reference name="content">
             <reference name="category.products">
