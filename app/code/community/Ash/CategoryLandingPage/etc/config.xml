@@ -68,6 +68,16 @@
     </global>
 
     <frontend>
+        <events>
+            <controller_action_layout_load_before>
+                <observers>
+                    <ash_categorylandingpage_add_customhandles>
+                        <class>Ash_CategoryLandingPage_Model_Observer</class>
+                        <method>addCustomHandles</method>
+                    </ash_categorylandingpage_add_customhandles>
+                </observers>
+            </controller_action_layout_load_before>
+        </events>
         <layout>
             <updates>
                 <ash_categorylandingpage>
