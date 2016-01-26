@@ -11,6 +11,32 @@
  */
 class Ash_CategoryLandingPage_Helper_Data extends Mage_Catalog_Helper_Data
 {
+    const DM_SUBCATEGORIES          = 'SUBCATEGORIES';
+    const DM_SUBCATEGORIES_MIXED    = 'SUBCATEGORIES_AND_CMS';
+
+    /**
+     * Check if category display mode is "Subcategories Only"
+     * @return bool
+     */
+    public function isSubcategoriesMode()
+    {
+        return $this->getCurrentCategory()->getDisplayMode() == self::DM_SUBCATEGORIES;
+    }
+
+    /**
+     * Check if category display mode is "Subcategories Only"
+     * @return bool
+     */
+    public function isMixedSubcategoriesMode()
+    {
+        return $this->getCurrentCategory()->getDisplayMode() == self::DM_SUBCATEGORIES_MIXED;
+    }
+
+    public function getCurrentCategory()
+    {
+        return Mage::registry('current_category');
+    }
+
     /**
      * linktoCategoryThumbnail
      *
